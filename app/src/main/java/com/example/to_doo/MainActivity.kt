@@ -36,13 +36,11 @@ fun TodoListApp() {
         topBar = {
             TopAppBar(
                 title = { Text("To-Do List") },
-//                backgroundColor = MaterialTheme.colorScheme.primary
             )
         },
         floatingActionButton = {
             FloatingActionButton(
                 onClick = { /* Add task logic here */ },
-          //      backgroundColor = MaterialTheme.colorScheme.secondary,
                 content = { Text("+", color = Color.White) }
             )
         }
@@ -71,8 +69,8 @@ fun TodoList(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth()
                 .background(Color.Gray.copy(alpha = 0.1f), shape = RoundedCornerShape(12.dp)),
-            singleLine = true,
-            colors = TextFieldDefaults.textFieldColors(
+                 singleLine = true,
+                 colors = TextFieldDefaults.textFieldColors(
                 focusedIndicatorColor = MaterialTheme.colorScheme.secondary,
                 unfocusedIndicatorColor = Color.Transparent
             )
@@ -131,10 +129,4 @@ fun TaskItem(taskItem: String, onRemove: () -> Unit) {
             }
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    TodoListApp()
 }
